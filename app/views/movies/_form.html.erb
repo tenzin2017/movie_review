@@ -1,4 +1,5 @@
-<%= form_with model: @movie, html: { multipart: true } do |form| %>
+
+<%= form_with model: @movie, html: { multipart: true }  do |form| %>
   <% if movie.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
@@ -10,33 +11,55 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :title %>
-    <%= form.text_field :title, id: :movie_title %>
+    <%= form.text_field :title, id: :movie_title,class: "form-control" , placeholder: "e.g Harry Potter" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :description %>
-    <%= form.text_area :description, id: :movie_description %>
+    <%= form.text_area :description, id: :movie_description, class: "form-control" , placeholder: "Input some description"%>
   </div>
 
-  <div class="field">
+ <div class="field form-group">
     <%= form.label :director %>
-    <%= form.text_field :director, id: :movie_director %>
+    <%= form.text_field :director, id: :movie_director, class: "form-control" , placeholder: "Director name"%>
   </div>
 
+  <div class="form-group">
+    <%= form.label :rating %>
+    <select class="form-control" id="exampleSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  
+<%
+=begin %>
   <div class="field">
     <%= form.label :rating %>
     <%= form.text_field :rating, id: :movie_rating %>
   </div>
 
-  <div class="field">
+   <div class="field">
     <%= form.label :image %>
     <%= form.file_field :image, id: :movie_image %>
   </div>
 
+<%
+=end%>
+
+<div class="form-group">
+    <%= form.label :image%>
+    <%= form.file_field :image, id: :movie_image, class: "form-control-file"%>
+  </div>
+
+
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "btn btn-primary" %>
   </div>
 <% end %>
+
