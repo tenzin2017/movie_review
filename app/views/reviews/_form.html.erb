@@ -11,14 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :rating %>
     <%= form.number_field :rating, id: :review_rating %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :comment %>
-    <%= form.text_area :comment, id: :review_comment %>
+    <%= form.text_area :comment, id: :review_comment , class: "form-control"%>
   </div>
 
   <div class="actions">

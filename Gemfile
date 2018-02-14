@@ -32,6 +32,9 @@ gem "pry-rails", :group => :development
 gem "paperclip", "~> 4.3"
 gem 'jquery-star-rating-rails'
 gem 'searchkick'
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
