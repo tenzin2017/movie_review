@@ -27,33 +27,9 @@
   </div>
 
   <div class="field form-group">
-  <%= form.label :rating %>
-    <select class="form-control">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-
-  
-  
-<%
-=begin %>
-  
-
-   <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image, id: :movie_image %>
+   <%= form.label :rating %>
+   <%= form.select(:rating, [1,2,3,4,5], {}, { :class => 'form-control' }) %>
   </div>
-
-   <div class="field form-group">
-    <%= form.label :rating %>
-    <%= form.text_field :rating, id: :movie_rating %>
-  </div>
-<%
-=end%>
-
 <div class="form-group">
     <%= form.label :image%>
     <%= form.file_field :image, id: :movie_image, class: "form-control-file"%>

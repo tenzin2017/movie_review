@@ -13,7 +13,7 @@
 
   <div class="field form-group">
     <%= form.label :rating %>
-    <%= form.number_field :rating, id: :review_rating %>
+    <%= form.select(:rating, [1,2,3,4,5], {}, { :class => 'form-control' }) %>
   </div>
 
   <div class="field form-group">
