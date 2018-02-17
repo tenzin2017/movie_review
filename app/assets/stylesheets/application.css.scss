@@ -3,10 +3,15 @@
 @import "bootstrap";
 
 body {
-    background: #7BCECC;
+    background:#6ab04c;
+}
+body, wrapper {
+    min-height: 100vh;
 }
 
-
+main {
+    flex: 1;
+}
 .review_title {
     margin: 0 0 20px 0;
 }
@@ -20,4 +25,16 @@ body {
 }
 .glyphicon-star{
     color: #f1c40f;
+}
+
+footer {
+    background-color:#283149;
+    color:white;
+}
+
+.fa-facebook{
+    border: 1px solide white;
+    font-size: 200%;
+    padding: 5px;
+    background-color: blue;
 }

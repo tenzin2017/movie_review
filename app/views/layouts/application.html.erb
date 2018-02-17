@@ -6,16 +6,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   </head>
 
   <body>
-  <%= render 'layouts/header.html.erb' %>
-  
-  <div class="container">
-  <% flash.each do |name,msg| %>
-    <%= content_tag(:div, msg, class:"alert alert-info") %>
-    <% end %>
-    <%= yield %>
-    </div>
-  </body>
+    <wrapper class="d-flex flex-column">
+      <%= render 'layouts/header.html.erb' %>
+      
+      <main>
+        <div class="container">
+          <% flash.each do |name,msg| %>
+          <%= content_tag(:div, msg, class:"alert alert-info") %>
+          <% end %>
+          <%= yield %>
+          </div>
+      </main>
+
+        <%= render 'layouts/footer.html.erb'%>
+      </body>
+    </wrap>
 </html>

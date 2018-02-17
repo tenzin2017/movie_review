@@ -12,9 +12,11 @@
 
 <div class="row">
 <% @movies.each do |movie| %>
-<div class="col-sm-6 col-md-3 mb-4" >
-<div class="thumnail">
+<div class="col-sm-6 col-md-4 col-lg-3 mb-4" >
+<div class="card p-2 text-center">
+<div class="img-fluid">
 <%= link_to (image_tag movie.image.url(:medium), class: "img-fluid"), movie %>
+</div>
 </div>
 </div>
 <% end %>

@@ -1,8 +1,12 @@
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="row">
-      <div class="col-md-4">
-        <%= image_tag @movie.image.url(:medium) , class: "img-fluid-responsive"%>
+      <div class="col-md-5">
+        <div class="text-center">
+           <%= image_tag @movie.image.url(:medium) , class: "img-fluid" %>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/G62HrubdD6o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <%= link_to "Click to Preview", "https://www.youtube.com/watch?v=dh8toGckAMI&t=6s", target: "_blank"%>
         <div class="table-responsive">
           <div class="table">
             <table>
@@ -27,10 +31,10 @@
           </div>
         </div>
         </div>
-        <div class="col-md-7 col-md-offset-1">
+        <div class="col-md-7">
         <h1 class="review_title"><%= @movie.title %></h1>
         <p><%= @movie.description %></p>
-
+       
         <% if @reviews.blank? %>
         <h3> No reviews just yet, would you like to add the first!</h3>
         <%= link_to "Write Review", new_movie_review_path(@movie), class: "btn btn-danger"%>
